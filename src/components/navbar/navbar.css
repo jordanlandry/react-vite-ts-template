@@ -1,5 +1,5 @@
 .navbar {
-  position: fixed;
+  /* position: fixed; */
 
   height: var(--nav-height);
   background: var(--nav-bg);
@@ -10,6 +10,11 @@
   backdrop-filter: saturate(180%) blur(20px);
   z-index: 100;
   font-weight: 100;
+}
+
+.navbar[data-fixed="true"] {
+  position: fixed;
+  top: 0;
 }
 
 .navbar-window {
