@@ -1,0 +1,146 @@
+/* Path: src\globals.css */
+:root {
+  /* ~~~ NAVBAR ~~~ */
+  --nav-height: 55px;
+  --nav-bg: rgba(0, 0, 0, 0.8);
+  --nav-fg: #ddd;
+
+  /* ~~~ COLORS ~~~ */
+  --color-primary: #f00;
+  --color-secondary: #0f0;
+  --color-tertiary: #00f;
+
+  /* ~~~ BUTTONS ~~~ */
+  --btn-fg-1: rgb(255, 255, 255);
+  --btn-fg-2: #0f0;
+  --btn-fg-3: #00f;
+
+  --btn-bg-1: rgb(0, 30, 87);
+  --btn-bg-2: #0f0;
+  --btn-bg-3: #00f;
+
+  --btn-border-1: rgb(0, 6, 55);
+  --btn-border-2: #0f0;
+  --btn-border-3: #00f;
+
+  --btn-hover-bg-1: rgb(0, 83, 249);
+  --btn-hover-bg-2: #0f0;
+  --btn-hover-bg-3: #00f;
+
+  --btn-hover-border-1: rgb(0, 78, 174);
+  --btn-hover-border-2: #0f0;
+  --btn-hover-border-3: #00f;
+
+  /* ~~~  ~~~ */
+  --border-radius-base: 0.25rem;
+}
+
+/* ~~~ BUTTONS ~~~ */
+button {
+  border: 1px solid #000;
+  background: #fff;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  outline: none;
+  transition: 200ms;
+}
+
+button:hover {
+  background: #eee;
+}
+
+.btn1 {
+  color: var(--btn-fg-1);
+  background: var(--btn-bg-1);
+  border-color: var(--btn-border-1);
+}
+
+.btn1:hover {
+  background: var(--btn-hover-bg-1);
+  border-color: var(--btn-hover-border-1);
+}
+
+.btn2 {
+  color: var(--btn-fg-2);
+  background: var(--btn-bg-2);
+  border-color: var(--btn-border-2);
+}
+
+.btn2:hover {
+  background: var(--btn-hover-bg-2);
+  border-color: var(--btn-hover-border-2);
+}
+
+.btn3 {
+  color: var(--btn-fg-3);
+  background: var(--btn-bg-3);
+  border-color: var(--btn-border-3);
+}
+
+.btn3:hover {
+  background: var(--btn-hover-bg-3);
+  border-color: var(--btn-hover-border-3);
+}
+
+.br1 {
+  border-radius: var(--border-radius-base);
+}
+
+.br2 {
+  border-radius: calc(var(--border-radius-base) * 2);
+}
+
+.br3 {
+  border-radius: calc(var(--border-radius-base) * 3);
+}
+
+.br4 {
+  border-radius: calc(var(--border-radius-base) * 4);
+}
+
+.br5 {
+  border-radius: calc(var(--border-radius-base) * 5);
+}
+
+.br6 {
+  border-radius: calc(var(--border-radius-base) * 6);
+}
+
+.br7 {
+  border-radius: calc(var(--border-radius-base) * 7);
+}
+
+.br8 {
+  border-radius: calc(var(--border-radius-base) * 8);
+}
+
+.br50 {
+  border-radius: 50%;
+}
+
+/* ~~~ DISPLAY ~~~ */
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-align-center {
+  align-items: center;
+}
+
+.flex-justify-center {
+  justify-content: center;
+}
+
+.flex-center {
+  align-items: center;
+  justify-content: center;
+}

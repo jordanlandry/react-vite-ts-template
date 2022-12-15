@@ -1,0 +1,49 @@
+.navbar {
+  position: fixed;
+
+  height: var(--nav-height);
+  background: var(--nav-bg);
+  width: 100%;
+
+  /* Blur */
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  z-index: 100;
+  font-weight: 100;
+}
+
+.navbar-window {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 3rem;
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-window > li {
+  display: inline-block;
+  list-style: none;
+  height: var(--nav-height);
+}
+
+.navbar-window a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--nav-fg);
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  height: var(--nav-height);
+  padding: 0 1rem;
+
+  filter: brightness(0.8);
+}
+
+.navbar-window a:hover {
+  filter: brightness(1);
+}
