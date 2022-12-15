@@ -16,7 +16,7 @@ export default function AffixedNavbar() {
   const isFixed = currentScrollPos! <= -height!;
 
   return (
-    <>
+    <header>
       <div className="navbar-before" style={{ height: "300px" }} ref={beforeNavRef}>
         Content
       </div>
@@ -24,6 +24,6 @@ export default function AffixedNavbar() {
       <nav className="navbar" data-fixed={isFixed}>
         {width > MAX_WIDTH ? <NavWindow /> : <NavMobile />}
       </nav>
-    </>
+    </header>
   );
 }

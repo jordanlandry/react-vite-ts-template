@@ -8,8 +8,10 @@ export default function Navbar() {
   const width = useWidth();
 
   return (
-    <nav className="navbar" data-fixed="true">
-      {width > MAX_WIDTH ? <NavWindow /> : <NavMobile />}
-    </nav>
+    <header>
+      <nav className="navbar" data-fixed="true">
+        {width > MAX_WIDTH ? <NavWindow /> : <NavMobile />}
+      </nav>
+    </header>
   );
 }
