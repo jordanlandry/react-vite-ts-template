@@ -10,15 +10,12 @@ export default function Navbar() {
   const width = useWidth();
   useScroll(); // Re render the component on every scroll event.
 
+  // Affixed navbar properties
   // Change this to false to see the navbar disappear.
   const isAffixedNav = true;
-
-  // Refs
   const beforeNavRef = useRef<HTMLDivElement>(null);
-
   const height = beforeNavRef.current?.clientHeight;
   const currentScrollPos = beforeNavRef.current?.getBoundingClientRect().top;
-
   const isFixed = isAffixedNav ? currentScrollPos! <= -height! : true;
 
   return (

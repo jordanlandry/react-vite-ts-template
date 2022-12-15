@@ -13,8 +13,11 @@
 }
 
 .navbar[data-fixed="true"] {
+  /* Make it fixed */
   position: fixed;
   top: 0;
+
+  /*  */
 }
 
 .navbar-window {
