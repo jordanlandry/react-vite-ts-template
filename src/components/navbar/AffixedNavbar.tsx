@@ -1,9 +1,9 @@
-import useWidth from "../../hooks/useWidth";
-import NavMobile from "./NavMobile";
-import NavWindow from "./NavWindow";
-import "./navbar.css";
 import { useRef } from "react";
 import useScroll from "../../hooks/useScroll";
+import useWidth from "../../hooks/useWidth";
+import "./navbar.css";
+import NavMobile from "./NavMobile";
+import NavWindow from "./NavWindow";
 
 export default function AffixedNavbar() {
   const MAX_WIDTH = 738;

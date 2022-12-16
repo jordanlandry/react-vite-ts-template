@@ -80,20 +80,139 @@
   width: 100vw;
 }
 
+.navbar-mobile-open li::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: var(--nav-fg);
+  margin: 0 auto;
+}
+
+/* Don't show the line under the last element */
+.navbar-mobile-open li:last-child::after {
+  display: none;
+}
+
 @keyframes close-nav {
   0% {
-    transform: translateY(0);
+    transform: translateX(0);
+    /* transform: translateY(0) scale(1);
+    height: 100vh;
+    opacity: 1; */
   }
   100% {
-    transform: translateY(100%);
+    transform: translateX(-100%);
+    /* transform: translateY(calc(var(--nav-height) * -1)) scale(0.25);
+    height: calc(var(--nav-height) * 0.25);
+    opacity: 0; */
   }
 }
 
 @keyframes open-nav {
   0% {
-    transform: translateY(100%);
+    transform: translateX(-100%);
+
+    /* transform: translateY(calc(var(--nav-height) * -1)) scale(0.25);
+    height: calc(var(--nav-height) * 0.25);
+    opacity: 0; */
   }
   100% {
-    transform: translateY(0);
+    transform: translateX(0);
+    /* transform: translateY(0) scale(1);
+    height: 100vh;
+    opacity: 1; */
+  }
+}
+
+.navbar-mobile-list > div {
+  background-color: var(--nav-fg);
+  width: 30px;
+  height: 1px;
+  margin: calc(var(--nav-height) * 0.15) 10px;
+  transform-origin: 7.5%;
+}
+.navbar-mobile-list-anim > div:first-child {
+  animation: x-to-hamburger-1 var(--navbar-animation-time) ease forwards;
+}
+.navbar-mobile-list-anim > div:nth-child(2) {
+  animation: x-to-hamburger-2 var(--navbar-animation-time) ease forwards;
+}
+.navbar-mobile-list-anim > div:last-child {
+  animation: x-to-hamburger-3 var(--navbar-animation-time) ease forwards;
+}
+
+.navbar-mobile-x > div {
+  background-color: var(--nav-fg);
+  width: 30px;
+  height: 1px;
+  margin: calc(var(--nav-height) * 0.15) 10px;
+
+  transform-origin: 7.5%;
+}
+
+.navbar-mobile-x > div:first-child {
+  animation: hamburger-to-x-1 var(--navbar-animation-time) ease forwards;
+}
+
+.navbar-mobile-x > div:nth-child(2) {
+  animation: hamburger-to-x-2 var(--navbar-animation-time) ease forwards;
+}
+
+.navbar-mobile-x > div:last-child {
+  animation: hamburger-to-x-3 var(--navbar-animation-time) ease forwards;
+}
+
+@keyframes hamburger-to-x-1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes hamburger-to-x-2 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes hamburger-to-x-3 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-45deg);
+  }
+}
+
+@keyframes x-to-hamburger-1 {
+  0% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes x-to-hamburger-2 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes x-to-hamburger-3 {
+  0% {
+    transform: rotate(-45deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }

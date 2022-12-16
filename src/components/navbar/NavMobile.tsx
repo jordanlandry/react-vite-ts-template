@@ -1,5 +1,6 @@
 import { useState } from "react";
 import NavLink from "./NavLink";
+import NavMobileList from "./NavMobileList";
 
 export default function NavMobile() {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +13,7 @@ export default function NavMobile() {
 
   return (
     <div className="navbar-mobile">
-      <button onClick={toggleMenu}>{isOpen ? "Close" : "Open"} </button>
+      <NavMobileList isOpen={isOpen} toggleMenu={toggleMenu} hasBeenOpened={hasBeenOpened} />
       <a href="/" className="navbar-mobile-logo">
         Logo
       </a>

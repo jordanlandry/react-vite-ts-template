@@ -34,7 +34,7 @@
   /* ~~~  ~~~ */
   --border-radius-base: 0.25rem;
 
-  --navbar-animation-time: 0.4s;
+  --navbar-animation-time: 0.5s;
 }
 
 /* ~~~ BUTTONS ~~~ */
@@ -50,6 +50,19 @@ button {
 
 button:hover {
   background: #eee;
+}
+
+.unstyled-button {
+  border: none;
+  background: none;
+  padding: 0;
+  font-size: 1rem;
+  cursor: pointer;
+  outline: none;
+}
+
+.unstyled-button:hover {
+  background: none;
 }
 
 .btn1 {
