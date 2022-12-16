@@ -1,0 +1,6 @@
+.test-page {
+  /* background-image: url("https://pixabay.com/get/ga80b9eddfe81a21d14cb5a941b2d4b6613dc449913c9f1da6a85cb6d544d1c0adb27649156b68d690ef4c7b1eb7040331f504f80d8fd32a1ee3a8c361531ef665a218adc1c1b31aa7f1f2aa2379b45ed_1920.jpg"); */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

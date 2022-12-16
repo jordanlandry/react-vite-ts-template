@@ -5,4 +5,5 @@ body {
   font-family: "Montserrat", sans-serif;
 
   height: 150vh;
+  overflow-x: hidden;
 }

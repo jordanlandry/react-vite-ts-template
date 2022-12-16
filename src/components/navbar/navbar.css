@@ -132,6 +132,7 @@
   margin: calc(var(--nav-height) * 0.15) 10px;
   transform-origin: 7.5%;
 }
+
 .navbar-mobile-list-anim > div:first-child {
   animation: x-to-hamburger-1 var(--navbar-animation-time) ease forwards;
 }

@@ -1,0 +1,37 @@
+.card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(max(min(32%, 300px), 200px), 1fr));
+  grid-gap: 2rem;
+
+  padding: 3rem;
+}
+
+.card {
+  width: max(min(100%, 300px), 200px);
+  aspect-ratio: 4/5;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: 0.2s;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+}
+
+.card:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+}
+
+.card-anim {
+  animation: spin 1s linear forwards;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(180deg);
+  }
+}
