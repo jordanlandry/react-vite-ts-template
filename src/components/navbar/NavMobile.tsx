@@ -1,4 +1,5 @@
 import { useState } from "react";
+import useKeybind from "../../hooks/useKeybind";
 import NavLink from "./NavLink";
 import NavMobileList from "./NavMobileList";
 
@@ -10,6 +11,8 @@ export default function NavMobile() {
     setIsOpen((prev) => !prev);
     setHasBeenOpened(true); // Always should be true after the first click
   };
+
+  useKeybind("Escape", () => setIsOpen(false));
 
   return (
     <div className="navbar-mobile">

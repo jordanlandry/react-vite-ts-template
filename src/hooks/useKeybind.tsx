@@ -1,9 +1,12 @@
 import { useEffect } from "react";
 
-export default function useKeybind(e: KeyboardEvent, callback: () => void) {
+export default function useKeybind(key: string, callback: () => void) {
   useEffect(() => {
-    const handle = (e: KeyboardEvent) => callback();
+    const handle = (e: KeyboardEvent) => {
+      if (e.key === key) callback();
+    };
+
     window.addEventListener("keydown", handle);
     return () => window.removeEventListener("keydown", handle);
-  }, [e, callback]);
+  }, [key, callback]);
 }

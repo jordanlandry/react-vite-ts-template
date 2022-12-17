@@ -24,7 +24,7 @@
 }
 
 .card-anim {
-  animation: spin 1s linear forwards;
+  animation: spin 0.2s linear forwards;
 }
 
 @keyframes spin {
